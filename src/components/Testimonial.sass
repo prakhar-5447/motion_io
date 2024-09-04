@@ -1,0 +1,106 @@
+.testimonial-section
+    background-color: #1f1d1d
+    padding: 60px 200px
+    color: #f1f1f1
+    text-align: center
+
+    h2
+        font-size: 2.4rem
+        margin-bottom: 40px
+        color: #ffffff
+
+        span
+            color: #26cfaa
+
+    .testimonial-container
+        display: flex
+        justify-content: space-between
+        gap: 40px
+        margin-bottom: 30px
+
+        .testimonial-card
+            background-color: #2a2727
+            border-radius: 10px
+            padding: 30px
+            width: 100%
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            text-align: left
+
+            .testimonial-text
+                font-size: 1.1rem
+                font-style: italic
+                margin-bottom: 30px
+
+            .testimonial-info
+                display: flex
+                align-items: flex-start
+                justify-content: center
+                .curl
+                    line-height: 1rem
+                    margin-right: 3px
+                .testimonial-name
+                    font-size: 1rem
+                    font-weight: bold
+                    line-height: 1rem
+
+                .testimonial-role
+                    font-size: 0.8rem
+                    color: #a5a5a5
+
+.text-divider
+    text-align: center
+    background: linear-gradient(to bottom, #1f1d1d 50%, #f9f9f9 50%)
+    position: relative
+
+    .text-divider-content
+        font-size: 20rem
+        font-weight: bold
+        line-height: 15rem
+        text-align: center
+
+    .text-divider-content:nth-child(1)
+        color: #f9f9f9
+
+    .text-divider-content:nth-child(2)
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        color: #1f1d1d
+        clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%)
+
+    .bouncing-ball
+        position: absolute
+        width: 50px
+        height: 50px
+        background-color: #26cfaa
+        border-radius: 50%
+        top: -8px
+        left: 50%
+        transform: translate(-50%, -50%)
+        animation: bounce 1.5s infinite
+
+        @keyframes bounce
+            0%, 20%, 50%, 80%, 100%
+                transform: translate(-50%, -50%) scale(1)
+
+            40%
+                transform: translate(-50%, -150%) scale(1.2)
+
+            60%
+                transform: translate(-50%, -100%) scale(1)
+
+.text-footer
+    background: #f9f9f9
+    text-align: center
+    color: #d6d6d6
+    font-size: 5rem
+
+.black
+    height: 60px
+    background-color: #1f1d1d
+.white
+    height: 60px
+    background-color: #f9f9f9

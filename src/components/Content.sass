@@ -1,0 +1,85 @@
+.playlist-content
+    background-color: #1f1d1d
+    display: flex
+    justify-content: flex-start
+    padding: 60px 200px
+    .playlist
+        width: 400px
+        overflow-y: auto
+        height: 500px
+        margin-right: 60px
+        scrollbar-width: auto
+        -ms-overflow-style: auto
+        &::-webkit-scrollbar
+            display: block
+            width: 6px
+        &::-webkit-scrollbar-thumb
+            background-color: #57575774
+            border-radius: 4px
+
+        .video-list
+            list-style: none
+
+            .video-item
+                display: flex
+                align-items: center
+                padding: 15px
+                cursor: pointer
+                transition: background 0.3s ease
+
+                &:hover
+                    background-color: #333
+
+                .thumbnail
+                    width: 100px
+                    height: 60px
+                    background-color: #444
+                    margin-right: 15px
+
+                .video-info
+                    h4
+                        font-size: 1rem
+                        color: #f3f3f3
+
+                    p
+                        font-size: 0.8rem
+                        color: #d6d6d6
+
+                    span
+                        font-size: 0.7rem
+                        color: #777
+
+    .video-player
+        flex: 1
+        display: grid
+        grid-template-columns: repeat(3,1fr)
+        column-gap: 20px
+        row-gap: 30px
+        align-content: start
+        .video-container
+            width: 100%
+            position: relative
+
+            .play-button-overlay
+                color: #acacac
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                width: 60px
+                height: 60px
+                background: rgba(0, 0, 0, 0.633)
+                border-radius: 50%
+                display: flex
+                align-items: center
+                justify-content: center
+                cursor: pointer
+                transition: background 0.3s ease
+
+                &:hover
+                    background: rgba(0, 0, 0, 0.768)
+                    color: #ececec
+            img
+                width: 100%
+                height: auto
+                border-radius: 4px

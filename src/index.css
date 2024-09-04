@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'Cairo';
+  font-weight: 400;
+  src: url('./assets/fonts/Cairo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cairo';
+  font-weight: 500;
+  src: url('./assets/fonts/Cairo-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cairo';
+  font-weight: 600;
+  src: url('./assets/fonts/Cairo-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cairo';
+  font-weight: 700;
+  src: url('./assets/fonts/Cairo-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Pacifico';
+  font-weight: 400;
+  src: url('./assets/fonts/Pacifico-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Jersey10';
+  font-weight: 500;
+  src: url('./assets/fonts/Jersey10-Regular.ttf') format('truetype');
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* cursor: url('./assets/cursor.png') 16 16, auto; */
+  cursor: url('./assets/cursor-16x16.png') 5 5, auto
+}
+
+/* html,
+body {
+  background-color: black;
+} */

@@ -1,0 +1,147 @@
+.footer
+    background-color: #1f1d1d
+    padding: 40px 200px
+
+    .footer-top
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        h2
+            position: relative
+            font-size: 3rem
+            display: flex
+            align-items: center
+            justify-content: center
+            position: relative
+            img
+                position: absolute
+                width: 100%
+                scale: 1.5
+            span
+                z-index: 2
+                color: #ffffff
+
+        a
+            padding: 8px 18px
+            border: 1px solid white
+            border-radius: 50px
+            color: white
+            font-size: 1rem
+            cursor: pointer
+            background: #ffffff35
+
+    .container
+        margin: 60px 0px
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        .footer-col:first-child
+            flex: 2
+            h3
+                font-size: 1.3rem
+            p
+                font-size: 1rem
+                margin-bottom: 20px
+                margin-right: 100px
+        .footer-col
+            flex: 1
+            color: white
+
+            ul
+                list-style: none
+                li:not(:last-child)
+                    margin-bottom: 10px
+
+                li a
+                    color: #d6d6d6
+                    display: block
+                    font-size: 1rem
+                    font-weight: 300
+                    text-transform: capitalize
+                    text-decoration: none
+
+                li a:hover
+                    color: #FFF
+                    text-decoration: underline
+            h4
+                font-size: 18px
+                color: #f3f3f3
+                text-transform: capitalize
+                margin-bottom: 35px
+                font-weight: 500
+                position: relative
+
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 0
+                    bottom: -10px
+                    background-color: #E91E63
+                    width: 100px
+                    height: 2px
+
+    .social-links
+        display: flex
+        gap: 16px
+        a
+            display: flex
+            align-items: center
+            justify-content: center
+            color: #FFF
+            background-color: rgba(255, 255, 255, 0.2)
+            padding: 12px
+            font-size: 1.3rem
+            border-radius: 50%
+            transition: all 0.5s ease
+
+            &:hover
+                color: #151515
+                background-color: #FFF
+
+    .footer-bottom
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        border-top: 1px solid #333
+        padding-top: 20px
+
+        .subscribe
+            h3
+                color: #f3f3f3
+                font-size: 1.3em
+
+            form
+                display: flex
+                gap: 20px
+                width: 400px
+
+                input
+                    background-color: white
+                    flex: 1
+                    padding: 10px 15px
+                    border-radius: 5px
+                    border: none
+                    outline: none
+                    font-size: 0.8rem
+
+                button
+                    background-color: #26cfaa
+                    color: #fff
+                    padding: 10px 15px
+                    border: none
+                    border-radius: 5px
+                    cursor: pointer
+                    font-size: 1rem
+                    transition: background-color 0.3s ease
+
+                    &:hover
+                        background-color: #1a9b84
+
+        .copyright
+            p
+                color: white
+                font-size: 1rem
+                text-align: center
+                margin: 0
