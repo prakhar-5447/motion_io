@@ -2,6 +2,7 @@ import React from 'react';
 import './Footer.sass';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import brush from "/assets/brush.svg";
+import { MdSend } from 'react-icons/md';
 
 const Footer: React.FC = () => {
 
@@ -60,13 +61,12 @@ const Footer: React.FC = () => {
                     <h3>Subscribe to Our Newsletter</h3>
                     <form action="#" method="post">
                         <input type="email" name="email" placeholder="Email" required />
-                        <button type="submit">Subscribe</button>
+                        <button type="submit"><MdSend /></button>
                     </form>
                 </div>
                 <div className="copyright">
                     <p>&copy; 2024 <i><b>pixel8cloud</b></i>. All Rights Reserved.</p>
                 </div>
-
             </div>
         </footer>
 

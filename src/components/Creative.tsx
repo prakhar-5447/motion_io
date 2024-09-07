@@ -56,10 +56,10 @@ const Creative: React.FC = () => {
     }
 
     const profiles = [
-        { img: user_1, name: 'Alice', profession: 'Designer', top: '5%', left: '60%', rotationZ: '-10deg', rotationY: '30deg', rotationX: '10deg', scale: 1.3 },
-        { img: user_2, name: 'Bob', profession: 'Developer', top: '20%', left: '80%', rotationZ: '10deg', rotationY: '-80deg', rotationX: '10deg', scale: 1 },
-        { img: user_3, name: 'Charlie', profession: 'Project Manager', top: '40%', left: '10%', rotationZ: '-5deg', rotationY: '100deg', rotationX: '10deg', scale: 0.9 },
-        { img: user_4, name: 'Eve', profession: 'Product Owner', top: '60%', left: '40%', rotationZ: '20deg', rotationY: '5deg', rotationX: '60deg', scale: 1.2 },
+        { img: user_1, name: 'Alice', profession: 'Designer' },
+        { img: user_2, name: 'Bob', profession: 'Developer' },
+        { img: user_3, name: 'Charlie', profession: 'Project Manager' },
+        { img: user_4, name: 'Eve', profession: 'Product Owner' },
     ];
 
 
@@ -67,7 +67,7 @@ const Creative: React.FC = () => {
         <>
             <div className="block" ref={bar}>
                 <div className="pixel8cloud" onClick={moveUp}>
-                    <div className="block">
+                    <div className="label">
                         <p>
                             pixel8cloud
                         </p>
@@ -79,13 +79,8 @@ const Creative: React.FC = () => {
                     <div
                         className="profile-card"
                         key={index}
-                        style={{
-                            top: profile.top,
-                            left: profile.left,
-                            transform: `rotate(${profile.rotationZ}) rotateY(${profile.rotationY}) rotateX(${profile.rotationX}) scale(${profile.scale})`,
-                        }}
                     >
-                        <div className="card-strip"></div>
+                        <div className="card-dot"></div>
                         <div className="avatar">
                             <img src={profile.img} alt="no_image" />
                         </div>

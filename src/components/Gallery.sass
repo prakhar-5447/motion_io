@@ -3,20 +3,23 @@
     position: relative
     .gallery-header
         text-align: center
-        margin-bottom: 40px
+        padding: 0px 40px
+        margin-bottom: 20px
 
         h2
             font-size: 2.5rem
             margin-bottom: 10px
             color: #1f1d1d
+            line-height: 3rem
 
         p
             font-size: 1.2rem
+            line-height: 1.8rem
             color: #d6d6d6
 
     .gallery-grid
         display: grid
-        grid-template-columns: repeat(6, 1fr)
+        grid-template-columns: repeat(3, 1fr)
         grid-template-rows: repeat(3, 0.5fr)
         gap: 0
 
@@ -48,9 +51,10 @@
     .gallery-footer
         text-align: center
         margin-top: 40px
-
+        padding: 0px 40px
         p
             font-size: 1.2rem
+            line-height: 1.5rem
             color: #d6d6d6
 
     .effect
@@ -58,13 +62,12 @@
         position: absolute
         height: 500px
         width: 100%
-        bottom: 70px
+        bottom: 40px
         background: linear-gradient(to top, #f9f9f9,#f9f9f900)
 
     .fade-effect
         display: flex
         justify-content: center
-        align-items: flex-end
         hr
             position: absolute
             bottom: 55px
@@ -74,7 +77,7 @@
             border-top: 1px solid #b0b0b0
         .show-more
             position: absolute
-            bottom: 55px
+            bottom: 60px
             z-index: 2
             background: white
             text-align: center
@@ -89,3 +92,17 @@
             cursor: pointer
             p
                 margin-right: 4px
+
+@media only screen and (min-width: 600px)
+    .gallery-section
+        .fade-effect
+            .show-more
+                bottom: 55px
+
+@media only screen and (min-width: 1200px)
+    .gallery-section
+        .gallery-header
+            padding: 0px 200px
+            margin-bottom: 40px
+        .gallery-grid
+            grid-template-columns: repeat(6, 1fr)

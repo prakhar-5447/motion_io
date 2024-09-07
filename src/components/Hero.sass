@@ -8,11 +8,12 @@
   overflow: hidden
 
   .shape-line-1
+    display: none
     position: absolute
     top: -10px
     left: -10px
     border: 2px solid #939393
-    width: 300px
+    width: 200px
     height: 300px
     border-radius: 8px
     .object
@@ -125,6 +126,7 @@
             font-weight: 700
 
   .shape-line-2
+    display: none
     position: absolute
     right: -10px
     border: 2px solid #939393
@@ -160,10 +162,48 @@
           bottom: calc(100% - 9px)
           right: calc(0% - 20px)
 
+  .shape-line-3
+    position: absolute
+    top: -10px
+    border: 2px solid #939393
+    width: 70vw
+    height: 15vh
+    border-radius: 8px
+    .object
+      position: absolute
+      width: 20px
+      height: 20px
+      background-color: #626262
+      border-radius: 50%
+      top: -20px
+      right: -9px
+      animation: linePath-3 10s ease-in-out infinite
+      @keyframes linePath-3
+        0%
+          top: calc(0% - 20px)
+          right: calc(0% - 10px)
+
+        30%
+          top: calc(100% - 9px)
+          right: calc(0% - 10px)
+
+        60%
+          top: calc(100% - 9px)
+          right: calc(100% - 9px)
+
+        90%
+          top: calc(0% - 20px)
+          right: calc(100% - 9px)
+
+        100%
+          top: calc(0% - 20px)
+          right: calc(0% - 9px)
+
   .hero-container
     display: flex
     justify-content: center
     align-items: center
+    padding: 0px 40px
     flex-direction: column
     opacity: 0
     transform: translateY(100px)
@@ -173,18 +213,22 @@
       display: flex
       justify-content: center
       align-items: center
+      flex-wrap: wrap
+      column-gap: 18px
+      row-gap: 12px
       .hero-title
         font-size: 3.4rem
+        line-height: 3.4rem
         text-align: center
         font-weight: 600
         color: #1dc9bd
-        margin-right: 18px
 
       .button
         padding: 5px
         border-radius: 100px
         border: 5px dashed #3d3d3d
         .title
+          line-height: 5rem
           font-family: 'Jersey10'
           background-color: #3d3d3d
           border-radius: 100px
@@ -193,10 +237,11 @@
           font-size: 5rem
 
     .hero-para
+      line-height: 2.44rem
       font-size: 1.4rem
       color: #6f6f6f
       text-align: center
-      max-width: 70%
+      padding: 0px 0px
       margin-bottom: 60px
 
     .cube-loader
@@ -248,7 +293,7 @@
   .scroll-up-arrow
     position: absolute
     bottom: 20px
-    left: 50%
+    left: 48%
     transform: translateX(-50%)
     cursor: pointer
     animation: bounce 2s infinite
@@ -268,3 +313,14 @@
   to
     opacity: 1
     transform: translateY(0)
+
+@media only screen and (min-width: 1200px)
+  .hero
+    .shape-line-1,.shape-line-2
+      display: block
+
+    .shape-line-3
+      display: none
+
+    .hero-container
+      padding: 0px 300px

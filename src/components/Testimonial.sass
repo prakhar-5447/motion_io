@@ -1,12 +1,12 @@
 .testimonial-section
     background-color: #1f1d1d
-    padding: 60px 200px
+    padding: 20px 40px
     color: #f1f1f1
     text-align: center
 
     h2
         font-size: 2.4rem
-        margin-bottom: 40px
+        margin-bottom: 20px
         color: #ffffff
 
         span
@@ -15,14 +15,17 @@
     .testimonial-container
         display: flex
         justify-content: space-between
-        gap: 40px
+        gap: 30px
         margin-bottom: 30px
+        flex-wrap: wrap
 
         .testimonial-card
+            flex: 1
             background-color: #2a2727
             border-radius: 10px
-            padding: 30px
+            padding: 20px
             width: 100%
+            min-width: 250px
             display: flex
             flex-direction: column
             align-items: flex-start
@@ -31,7 +34,7 @@
             .testimonial-text
                 font-size: 1.1rem
                 font-style: italic
-                margin-bottom: 30px
+                margin-bottom: 20px
 
             .testimonial-info
                 display: flex
@@ -55,9 +58,9 @@
     position: relative
 
     .text-divider-content
-        font-size: 20rem
+        font-size: 18vw
         font-weight: bold
-        line-height: 15rem
+        line-height: 15vw
         text-align: center
 
     .text-divider-content:nth-child(1)
@@ -73,11 +76,11 @@
 
     .bouncing-ball
         position: absolute
-        width: 50px
-        height: 50px
+        width: 3vw
+        height: 3vw
         background-color: #26cfaa
         border-radius: 50%
-        top: -8px
+        top: 0vh
         left: 50%
         transform: translate(-50%, -50%)
         animation: bounce 1.5s infinite
@@ -96,11 +99,49 @@
     background: #f9f9f9
     text-align: center
     color: #d6d6d6
-    font-size: 5rem
+    font-size: 5vw
 
 .black
-    height: 60px
+    height: 10px
     background-color: #1f1d1d
 .white
-    height: 60px
+    height: 10px
     background-color: #f9f9f9
+
+@media only screen and (min-width: 600px)
+    .testimonial-section
+        padding: 40px 40px
+        h2
+            margin-bottom: 40px
+        .testimonial-container
+            .testimonial-card
+                padding: 30px
+
+    .black
+        height: 20px
+    .white
+        height: 20px
+
+@media only screen and (min-width: 858px)
+    .testimonial-section
+        h2
+            margin-bottom: 40px
+        .testimonial-container
+            .testimonial-card
+                padding: 30px
+                .textimonial-text
+                    margin-bottom: 30px
+
+    .black
+        height: 40px
+    .white
+        height: 40px
+
+@media only screen and (min-width: 1200px)
+    .testimonial-section
+        padding: 60px 200px
+    .black
+        height: 60px
+
+    .white
+        height: 60px

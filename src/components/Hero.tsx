@@ -36,6 +36,9 @@ const Hero: React.FC = () => {
             <div className="shape-line-2">
                 <div className="object"></div>
             </div>
+            <div className="shape-line-3">
+                <div className="object"></div>
+            </div>
             <div className="hero-container">
                 <div className="hero-tag">
                     <h1 className="hero-title">Unleash your creativity with</h1>

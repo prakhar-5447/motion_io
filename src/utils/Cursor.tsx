@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './Cursor.sass';
 
 const Cursor: React.FC = () => {
     const [position, setPosition] = useState({ x: 0, y: 0 });
-
+    const cursor = useRef<HTMLDivElement>(null);
     useEffect(() => {
         const handleMouseMove = (e: MouseEvent) => {
             setPosition({ x: e.clientX, y: e.clientY });
+            cursor.current!.style.display = "block"
         };
 
 
@@ -19,7 +20,7 @@ const Cursor: React.FC = () => {
 
     return (
         <div
-            className="circle-cursor"
+            className="circle-cursor" ref={cursor}
             style={{ transform: `translate(${position.x - 22}px, ${position.y - 22}px)` }}
         ></div>
     );

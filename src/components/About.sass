@@ -10,21 +10,20 @@
         position: relative
         overflow: hidden
         width: 100%
-        padding: 40px 80px
-
+        padding: 20px
         .tech-track
             display: flex
-            justify-content: center
+            justify-content: space-around
             align-items: center
+            flex-wrap: wrap
+            row-gap: 5px
+            column-gap: 30px
+
             .tech-item
-                flex: 1
                 display: flex
-                flex-direction: column
-                align-items: center
-                justify-content: center
-                padding: 10px
                 font-size: 1.4rem
                 font-weight: 500
+                text-align: center
                 span
                     color: #a9a9a9
                     transition: color 0.3s ease-in-out
@@ -32,23 +31,25 @@
                         color: #ffffff
 
 .what-you-learn
-    padding: 40px 200px
+    padding: 30px 40px
     background-color: #1f1d1d
     h2
         font-size: 2.4rem
         color: #ffffff
         text-align: center
-        margin-bottom: 60px
+        margin-bottom: 20px
         word-spacing: 0.8rem
+        line-height: 2.6rem
         span
             color: #26cfaa
     .learn-cards-container
         display: flex
         align-items: center
         justify-content: center
+        flex-wrap: wrap
         gap: 40px
-
         .card
+            max-width: 300px
             display: flex
             align-items: center
             flex-direction: column
@@ -56,10 +57,9 @@
             &:nth-child(3) img
                 filter: invert(1)
             img
-                height: 100px
+                height: 60px
                 width: auto
             .content
-                padding: 1.1rem
                 .title
                     color: #f3f3f3
                     font-size: 1.2rem
@@ -75,7 +75,7 @@
 .join-community
     background-color: #1f1d1d
     color: #fff
-    padding: 120px 0px
+    padding: 40px 0px
     position: relative
     overflow: hidden
     display: flex
@@ -95,9 +95,10 @@
         visibility: hidden
 
     .community-content
-        padding-left: 200px
+        padding: 0px 40px
         position: relative
         img
+            display: none
             position: absolute
             width: 160px
             height: auto
@@ -105,12 +106,13 @@
             left: 0px
         h2
             font-size: 2.4rem
+            line-height: 3.6rem
             color: #f3f3f3
 
         p
             text-align: left
             font-size: 1.2rem
-            line-height: 1.9rem
+            line-height: 2rem
             margin-bottom: 20px
             color: #d6d6d6
 
@@ -129,7 +131,7 @@
 
     .image-content
         position: relative
-        display: inline-block
+        display: none
         &::after
             content: ""
             position: absolute
@@ -137,10 +139,57 @@
             left: 0
             right: 0
             height: 200px
-            width: 1000px
+            width: 130%
             background: linear-gradient(to bottom, #f9f9f900 0%, #1f1d1d75 50%, #1f1d1d 100%)
 
         img
-            width: 1000px
+            width: 130%
             height: auto
             display: block
+
+
+@media only screen and (min-width: 600px)
+    .about
+        .tech-slider
+            padding: 40px 100px
+            .tech-track
+                row-gap: 20px
+                column-gap: 60px
+
+    .what-you-learn
+        h2
+            margin-bottom: 30px
+        .learn-cards-container
+            gap: 40px
+            .card
+                img
+                    height: 80px
+
+    .join-community
+        padding: 60px 0px
+        .community-content
+            padding: 0px 100px 0px 200px
+            img
+                display: block
+
+@media only screen and (min-width: 1200px)
+    .about
+        .tech-slider
+            padding: 40px 200px
+
+    .what-you-learn
+        padding: 60px 200px
+        h2
+            margin-bottom: 60px
+        .learn-cards-container
+            gap: 60px
+            .card
+                img
+                    height: 100px
+
+    .join-community
+        padding: 120px 0px
+        .community-content
+            padding: 0px 0px 0px 200px
+        .image-content
+            display: inline-block

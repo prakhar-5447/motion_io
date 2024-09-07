@@ -8,7 +8,6 @@ import Content from './components/Content';
 import Gallery from './components/Gallery';
 import Cursor from './utils/Cursor';
 import Testimonial from './components/Testimonial';
-import Artboard from './components/Artboard';
 
 function App() {
 
@@ -19,7 +18,6 @@ function App() {
       <Content />
       <Testimonial />
       <Creative />
-      <Artboard />
       <Gallery />
       <Blog />
       <Footer />

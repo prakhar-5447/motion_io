@@ -1,6 +1,6 @@
 .footer
     background-color: #1f1d1d
-    padding: 40px 200px
+    padding: 20px 40px
 
     .footer-top
         display: flex
@@ -9,7 +9,7 @@
 
         h2
             position: relative
-            font-size: 3rem
+            font-size: 2.4rem
             display: flex
             align-items: center
             justify-content: center
@@ -23,7 +23,7 @@
                 color: #ffffff
 
         a
-            padding: 8px 18px
+            padding: 6px 12px
             border: 1px solid white
             border-radius: 50px
             color: white
@@ -32,32 +32,37 @@
             background: #ffffff35
 
     .container
-        margin: 60px 0px
+        margin: 30px 0px
         display: flex
         flex-wrap: wrap
-        justify-content: space-between
+        justify-content: flex-start
+        column-gap: 40px
+        row-gap: 30px
+        .footer-col
+            min-width: 250px
         .footer-col:first-child
-            flex: 2
+            flex: 1
+            color: white
             h3
                 font-size: 1.3rem
             p
                 font-size: 1rem
                 margin-bottom: 20px
-                margin-right: 100px
-        .footer-col
+        .footer-col:not(:first-child)
             flex: 1
             color: white
 
             ul
                 list-style: none
                 li:not(:last-child)
-                    margin-bottom: 10px
+                    margin-bottom: 15px
 
                 li a
                     color: #d6d6d6
                     display: block
                     font-size: 1rem
                     font-weight: 300
+                    line-height: 1.3rem
                     text-transform: capitalize
                     text-decoration: none
 
@@ -65,10 +70,11 @@
                     color: #FFF
                     text-decoration: underline
             h4
-                font-size: 18px
+                font-size: 1.2rem
+                line-height: 1.5rem
                 color: #f3f3f3
                 text-transform: capitalize
-                margin-bottom: 35px
+                margin-bottom: 30px
                 font-weight: 500
                 position: relative
 
@@ -78,7 +84,7 @@
                     left: 0
                     bottom: -10px
                     background-color: #E91E63
-                    width: 100px
+                    width: 80px
                     height: 2px
 
     .social-links
@@ -100,28 +106,33 @@
                 background-color: #FFF
 
     .footer-bottom
+        width: 100%
         display: flex
         justify-content: space-between
         align-items: center
-        flex-wrap: wrap
+        flex-direction: column
         border-top: 1px solid #333
         padding-top: 20px
 
         .subscribe
+            width: 100%
+            flex: 1
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            justify-content: flex-start
+            margin-bottom: 20px
             h3
                 color: #f3f3f3
                 font-size: 1.3em
 
             form
                 display: flex
-                gap: 20px
-                width: 400px
-
+                min-width: 300px
                 input
-                    background-color: white
                     flex: 1
+                    background-color: white
                     padding: 10px 15px
-                    border-radius: 5px
                     border: none
                     outline: none
                     font-size: 0.8rem
@@ -129,11 +140,13 @@
                 button
                     background-color: #26cfaa
                     color: #fff
-                    padding: 10px 15px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    padding: 12px 20px
                     border: none
-                    border-radius: 5px
                     cursor: pointer
-                    font-size: 1rem
+                    font-size: 1.6rem
                     transition: background-color 0.3s ease
 
                     &:hover
@@ -141,7 +154,37 @@
 
         .copyright
             p
+                width: 100%
                 color: white
                 font-size: 1rem
                 text-align: center
                 margin: 0
+
+@media only screen and (min-width: 600px)
+    .footer
+        .footer-top
+            h2
+                font-size: 3rem
+            a
+                padding: 8px 18px
+        .container
+            margin: 40px 0px
+            .footer-col
+                h4
+                    margin-bottom: 35px
+
+        .footer-bottom
+            margin-bottom: 40px
+
+@media only screen and (min-width: 858px)
+    .footer
+        .container
+            margin: 60px 0px
+            column-gap: 80px
+
+@media only screen and (min-width: 1200px)
+    .footer
+        padding: 40px 200px
+        .footer-bottom
+            align-items: center
+            flex-direction: row

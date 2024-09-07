@@ -27,7 +27,7 @@ const About: React.FC = () => {
         {
             image: illustrator,
             title: 'Vector Art',
-            description: 'Create stunning vector illustrations with tools like Adobe Illustrator and Figma.'
+            description: 'Create stunning vector illustrations, svg and frame with tools like Adobe Illustrator and Figma.'
         }
     ];
     const tooltipRef = useRef<HTMLDivElement>(null);
@@ -63,13 +63,13 @@ const About: React.FC = () => {
                             <span>LOTIE</span>
                         </div>
                         <div className="tech-item">
-                            <span>AFTER EFFECTS</span>
-                        </div>
-                        <div className="tech-item">
                             <span>ILLUSTRATOR</span>
                         </div>
                         <div className="tech-item">
                             <span>CANVA</span>
+                        </div>
+                        <div className="tech-item">
+                            <span>AFTER EFFECTS</span>
                         </div>
                         <div className="tech-item">
                             <span>FRAMER</span>
@@ -80,8 +80,8 @@ const About: React.FC = () => {
             <section className="what-you-learn">
                 <h2>WHAT WE <span>OFFER</span></h2>
                 <div className="learn-cards-container">
-                    {learnContent.map((content) => (
-                        <div className="card">
+                    {learnContent.map((content, index) => (
+                        <div className="card" key={index}>
                             <img src={content.image} alt={content.title} />
                             <div className="content">
                                 <span className="title">

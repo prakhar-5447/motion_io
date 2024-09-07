@@ -1,13 +1,13 @@
 .playlist-content
     background-color: #1f1d1d
     display: flex
-    justify-content: flex-start
-    padding: 60px 200px
+    justify-content: center
+    padding: 20px 40px
     .playlist
+        display: none
         width: 400px
         overflow-y: auto
         height: 500px
-        margin-right: 60px
         scrollbar-width: auto
         -ms-overflow-style: auto
         &::-webkit-scrollbar
@@ -39,6 +39,7 @@
                 .video-info
                     h4
                         font-size: 1rem
+                        line-height: 1.2rem
                         color: #f3f3f3
 
                     p
@@ -50,11 +51,10 @@
                         color: #777
 
     .video-player
-        flex: 1
         display: grid
-        grid-template-columns: repeat(3,1fr)
+        grid-template-columns: repeat(2,1fr)
         column-gap: 20px
-        row-gap: 30px
+        row-gap: 10px
         align-content: start
         .video-container
             width: 100%
@@ -66,8 +66,8 @@
                 top: 50%
                 left: 50%
                 transform: translate(-50%, -50%)
-                width: 60px
-                height: 60px
+                width: 30px
+                height: 30px
                 background: rgba(0, 0, 0, 0.633)
                 border-radius: 50%
                 display: flex
@@ -83,3 +83,31 @@
                 width: 100%
                 height: auto
                 border-radius: 4px
+
+@media only screen and (min-width: 600px)
+    .playlist-content
+        .video-player
+            grid-template-columns: repeat(3,1fr)
+
+@media only screen and (min-width: 858px)
+    .playlist-content
+        .playlist
+            display: block
+            margin-right: 40px
+        .video-player
+            grid-template-columns: repeat(2,200px)
+            .video-container
+                .play-button-overlay
+                    width: 40px
+                    height: 40px
+
+@media only screen and (min-width: 1200px)
+    .playlist-content
+        .playlist
+            margin-right: 60px
+        .video-player
+            grid-template-columns: repeat(3,250px)
+            .video-container
+                .play-button-overlay
+                    width: 60px
+                    height: 60px
